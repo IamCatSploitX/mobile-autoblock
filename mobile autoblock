@@ -1,0 +1,40 @@
+local enabled = true
+local key = "f"
+
+local m = game:GetService"Players".LocalPlayer:GetMouse()
+game:GetService("Players").LocalPlayer.Chatted:Connect(function(msg)
+   if string.lower(msg) == ".abon" and enabled == false then
+      enabled = true
+   elseif string.lower(msg) == ".aboff" and enabled == true then
+   enabled = false
+   end
+end)
+
+function Autoblock()
+game.ReplicatedStorage.Events.WandEvent:FireServer(3)
+wait(2)
+end
+
+spawn(function()
+   while wait() do
+       if enabled then
+           repeat
+           repeat
+		   repeat
+		   repeat
+		   repeat
+		   repeat
+		   repeat
+		   repeat
+               Autoblock()
+           until enabled == false
+           until enabled == false
+		   until enabled == false
+		   until enabled == false
+		   until enabled == false
+		   until enabled == false
+		   until enabled == false
+		   until enabled == false
+       end
+   end
+end)
